@@ -20,6 +20,6 @@ public class Constant implements ITerminal{
 
     @Override
     public String getSymbol() {
-        return String.format("%d",this.value);
+        return String.format("%f",this.value);
     }
 }

@@ -20,7 +20,12 @@ public class Node {
         this.leftChild = leftChild;
         this.rightChild = rightChild;
         this.function = function;
-        this.nodeType = NodeType.NODE;
+        if(parent == null) {
+            this.nodeType = NodeType.ROOT;
+        }
+        else{
+            this.nodeType = NodeType.NODE;
+        }
     }
 
     public Node(ITerminal terminal) {
