@@ -15,10 +15,8 @@ public class Node {
 
 
 
-    public Node(Node parent, Node leftChild, Node rightChild, IFunction function) {
+    public Node(Node parent, IFunction function) {
         this.parent = parent;
-        this.leftChild = leftChild;
-        this.rightChild = rightChild;
         this.function = function;
         if(parent == null) {
             this.nodeType = NodeType.ROOT;
@@ -46,6 +44,22 @@ public class Node {
         else
         {
             throw new Exception("Invalid node state, can`t calculate");
+        }
+    }
+
+    public void setLeftChild(Node leftChild) {
+        this.leftChild = leftChild;
+    }
+
+    public void setRightChild(Node rightChild) {
+        this.rightChild = rightChild;
+    }
+
+    public String getSymbol(){
+        if(this.nodeType == NodeType.NODE || this.nodeType == NodeType.ROOT ){
+            return " { " + this.leftChild.getSymbol() + " " + this.function.getSymbol() + " " + this.rightChild.getSymbol() + " } ";
+        }else {
+            return this.terminal.getSymbol(); //NodeType.LEAF
         }
     }
 }
