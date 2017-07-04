@@ -78,5 +78,19 @@ public class TreeGenerator {
         return this.terminals.get(rand.nextInt(this.terminals.size()));
     }
 
+    public ArrayList<Node> rampedHalfAndHalf(int populationSize, int maxDepth){
+        ArrayList<Node> nodes = new ArrayList<Node>();
+
+        for (int i=0;i<populationSize;i++){
+            if( rand.nextInt()%2 == 0 ){
+                nodes.add(this.generateFullTree(maxDepth));
+            }
+            else {
+                nodes.add(this.generateGrowTree(maxDepth));
+            }
+        }
+        return nodes;
+    }
+
 
 }
