@@ -56,7 +56,4 @@ public class TreeGeneratorTest extends TestCase {
         assertNotNull(node.calculateNode());
         System.out.println("res:"+node.getSymbol());
     }
-
-
-
 }
