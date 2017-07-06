@@ -1,10 +1,7 @@
 package ut.model.genetic.tree;
 
 import junit.framework.TestCase;
-import model.genetic.tree.IFunction;
-import model.genetic.tree.ITerminal;
-import model.genetic.tree.Node;
-import model.genetic.tree.TreeGenerator;
+import model.genetic.tree.*;
 import model.genetic.tree.functions.Div;
 import model.genetic.tree.functions.Mul;
 import model.genetic.tree.functions.Sub;
@@ -17,7 +14,7 @@ import java.util.ArrayList;
 /**
  * Created by saruman on 3.07.2017.
  */
-public class TreeGeneratorTest extends TestCase {
+public class GeneUtilTest extends TestCase {
 
     private ArrayList<ITerminal> terminals = new ArrayList<ITerminal>();
     private ArrayList<IFunction> functions = new ArrayList<IFunction>();
@@ -42,18 +39,18 @@ public class TreeGeneratorTest extends TestCase {
 
     public void testGenerateFullTree() throws Exception {
 
-        TreeGenerator treeGenerator = new TreeGenerator(terminals, functions);
-        Node node = treeGenerator.generateFullTree(5);
-        assertNotNull(node.getSymbol());
-        assertNotNull(node.calculateNode());
+        GeneUtil geneUtil = new GeneUtil(terminals, functions);
+        Tree tree = geneUtil.generateFullTree(5);
+        assertNotNull(tree.getRootNode().getSymbol());
+        assertNotNull(tree.getRootNode().calculateNode());
     }
 
     public void testGenerateGrowTree() throws Exception {
 
-        TreeGenerator treeGenerator = new TreeGenerator(terminals, functions);
-        Node node = treeGenerator.generateGrowTree(5);
-        assertNotNull(node.getSymbol());
-        assertNotNull(node.calculateNode());
-        System.out.println("res:"+node.getSymbol());
+        GeneUtil geneUtil = new GeneUtil(terminals, functions);
+        Tree tree = geneUtil.generateGrowTree(5);
+        assertNotNull(tree.getRootNode().getSymbol());
+        assertNotNull(tree.getRootNode().calculateNode());
+        System.out.println("res:"+tree.getRootNode().getSymbol());
     }
 }

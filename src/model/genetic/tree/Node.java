@@ -18,12 +18,7 @@ public class Node {
     public Node(Node parent, IFunction function) {
         this.parent = parent;
         this.function = function;
-        if(parent == null) {
-            this.nodeType = NodeType.ROOT;
-        }
-        else{
-            this.nodeType = NodeType.NODE;
-        }
+        this.nodeType = NodeType.NODE;
     }
 
     public Node(ITerminal terminal) {
@@ -37,7 +32,7 @@ public class Node {
         {
             return this.terminal.getValue();
         }
-        else if( this.nodeType == NodeType.NODE || this.nodeType == NodeType.ROOT )
+        else if( this.nodeType == NodeType.NODE )
         {
             return this.function.execute( this.leftChild.calculateNode(), this.rightChild.calculateNode() );
         }
@@ -56,10 +51,56 @@ public class Node {
     }
 
     public String getSymbol(){
-        if(this.nodeType == NodeType.NODE || this.nodeType == NodeType.ROOT ){
+        if(this.nodeType == NodeType.NODE ){
             return " { " + this.leftChild.getSymbol() + " " + this.function.getSymbol() + " " + this.rightChild.getSymbol() + " } ";
         }else {
             return this.terminal.getSymbol(); //NodeType.LEAF
         }
     }
+
+    public Node getLeftChild() {
+        return leftChild;
+    }
+
+    public Node getRightChild() {
+        return rightChild;
+    }
+
+    public NodeType getNodeType() {
+        return nodeType;
+    }
+
+    public void setParent(Node parent) {
+        this.parent = parent;
+    }
+
+    public void setNodeType(NodeType nodeType) {
+        this.nodeType = nodeType;
+    }
+
+    public void setFunction(IFunction function) {
+        this.function = function;
+    }
+
+    public void setTerminal(ITerminal terminal) {
+        this.terminal = terminal;
+    }
+
+    public Node getParent() {
+
+
+        return parent;
+    }
+
+    public boolean replaceChild(Node oldChild, Node newChild){
+        if( oldChild == this.leftChild ) {
+            this.setLeftChild(newChild);
+            return true;
+        }else if (oldChild == this.rightChild ){
+            this.setRightChild(newChild);
+            return true;
+        }
+        return false;
+    }
+
 }

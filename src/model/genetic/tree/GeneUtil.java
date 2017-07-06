@@ -6,19 +6,19 @@ import java.util.Random;
 /**
  * Created by saruman on 3.07.2017.
  */
-public class TreeGenerator {
+public class GeneUtil {
 
     private ArrayList<ITerminal> terminals = new ArrayList<ITerminal>();
     private ArrayList<IFunction> functions = new ArrayList<IFunction>();
     private Random rand = new Random();
 
-    public TreeGenerator(ArrayList<ITerminal> terminals, ArrayList<IFunction> functions) {
+    public GeneUtil(ArrayList<ITerminal> terminals, ArrayList<IFunction> functions) {
         this.terminals = terminals;
         this.functions = functions;
     }
 
-    public Node generateFullTree(int depth){
-        return this.generateFullTree(depth, null);
+    public Tree generateFullTree(int depth){
+        return new Tree( this.generateFullTree(depth, null) );
     }
 
     private Node generateFullTree(int depth, Node parent)
@@ -40,11 +40,12 @@ public class TreeGenerator {
         return node;
     }
 
-    public Node generateGrowTree(int depth){
-        return this.generateGrowTree(depth, null);
+    public Tree generateGrowTree(int depth){
+        return new Tree( this.generateGrowTree(depth, null) );
     }
 
     private Node generateGrowTree(int depth, Node parent){
+
         if( depth <= 0 )
         {
             throw new IllegalArgumentException("Grow tree generation: Invalid tree depth:"+depth);
@@ -78,19 +79,59 @@ public class TreeGenerator {
         return this.terminals.get(rand.nextInt(this.terminals.size()));
     }
 
-    public ArrayList<Node> rampedHalfAndHalf(int populationSize, int maxDepth){
-        ArrayList<Node> nodes = new ArrayList<Node>();
+    public ArrayList<Tree> rampedHalfAndHalf(int populationSize, int maxDepth){
+        ArrayList<Tree> trees = new ArrayList<Tree>();
 
         for (int i=0;i<populationSize;i++){
             if( rand.nextInt()%2 == 0 ){
-                nodes.add(this.generateFullTree(maxDepth));
+                trees.add(this.generateFullTree(maxDepth));
             }
             else {
-                nodes.add(this.generateGrowTree(maxDepth));
+                trees.add(this.generateGrowTree(maxDepth));
             }
         }
-        return nodes;
+        return trees;
     }
 
+    public void crossover(Tree a, Tree b){
+        Node sectionA = this.getRandomLocation(a.getRootNode());
+        Node sectionB = this.getRandomLocation(b.getRootNode());
+
+        if ( sectionA == a.getRootNode() ){
+            a.setRootNode(sectionB);
+        }
+        if ( sectionB == b.getRootNode() ){
+            b.setRootNode(sectionA);
+        }
+
+        sectionA.getParent().replaceChild(sectionA, sectionB);
+        sectionB.getParent().replaceChild(sectionB, sectionA);
+
+        Node tempParNodeA = sectionA.getParent();
+        sectionA.setParent(sectionB.getParent());
+        sectionB.setParent(tempParNodeA.getParent());
+
+    }
+
+    private Node getRandomLocation(Node node){
+
+        int pathDepth = 0;
+        while(node.getNodeType() != NodeType.LEAF) {
+            if ( rand.nextInt()%2 == 0 ){
+                node = node.getLeftChild();
+            }else {
+                node = node.getRightChild();
+            }
+            pathDepth++;
+        }
+
+        int selected = rand.nextInt()%pathDepth;
+
+        while ( selected > -1 ) {
+            node = node.getParent();
+            selected--;
+        }
+        return node;
+    }
 
 }
