@@ -16,7 +16,7 @@ public class NodeTest extends TestCase {
     public void testCalculateNode() throws Exception {
 
         ITerminal terminal = new Constant(10.0);
-        Node node = new Node(terminal);
+        Node node = new Node(null, terminal);
         assertEquals(10.0, node.calculateNode());
 
     }
@@ -27,9 +27,10 @@ public class NodeTest extends TestCase {
         ITerminal terminalRight = new Constant(20.0);
         IFunction function = new Sum();
 
-        Node left = new Node(terminalLeft);
-        Node right = new Node(terminalRight);
         Node root = new Node(null, function);
+        Node left = new Node(root, terminalLeft);
+        Node right = new Node(root, terminalRight);
+
 
         root.setLeftChild(left);
         root.setRightChild(right);
@@ -43,14 +44,14 @@ public class NodeTest extends TestCase {
         Node root = new Node(null, new Div());
 
         Node left = new Node(root, new Sum());
-        Node leftleft = new Node(new Constant(10.0));
-        Node leftright = new Node(new Constant(20.0));
+        Node leftleft = new Node(null, new Constant(10.0));
+        Node leftright = new Node(null, new Constant(20.0));
         left.setLeftChild(leftleft);
         left.setRightChild(leftright);
 
         Node right = new Node(root, new Sum());
-        Node rightleft = new Node(new Constant(1.0));
-        Node rightright = new Node(new Constant(3.0));
+        Node rightleft = new Node(null, new Constant(1.0));
+        Node rightright = new Node(null, new Constant(3.0));
         right.setLeftChild(rightleft);
         right.setRightChild(rightright);
 

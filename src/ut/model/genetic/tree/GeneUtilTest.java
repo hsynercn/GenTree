@@ -24,9 +24,6 @@ public class GeneUtilTest extends TestCase {
 
         terminals.add(new Constant(1.0));
         terminals.add(new Constant(2.0));
-        terminals.add(new Constant(3.0));
-        terminals.add(new Constant(5.0));
-
         terminals.add(new Variable(2.0, "A"));
         terminals.add(new Variable(3.0, "B"));
 
@@ -51,6 +48,26 @@ public class GeneUtilTest extends TestCase {
         Tree tree = geneUtil.generateGrowTree(5);
         assertNotNull(tree.getRootNode().getSymbol());
         assertNotNull(tree.getRootNode().calculateNode());
-        System.out.println("res:"+tree.getRootNode().getSymbol());
     }
+
+    public void testCrossover() throws Exception {
+        GeneUtil geneUtil = new GeneUtil(terminals, functions);
+        Tree a = geneUtil.generateFullTree(5);
+        Tree b = geneUtil.generateGrowTree(5);
+
+        geneUtil.crossover(a, b);
+
+        assertNotNull(a.getRootNode().calculateNode());
+        assertNotNull(b.getRootNode().calculateNode());
+        assertNotNull(a.getRootNode().getSymbol());
+        assertNotNull(b.getRootNode().getSymbol());
+    }
+
+    public void testGetRandomLocation(){
+        GeneUtil geneUtil = new GeneUtil(terminals, functions);
+        Tree a = geneUtil.generateFullTree(5);
+        Node sel = geneUtil.getRandomLocation(a, GeneUtil.SelectionType.INCREMENTAL_REVERSE);
+        assertNotNull(sel);
+    }
+
 }

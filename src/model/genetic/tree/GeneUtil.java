@@ -8,9 +8,16 @@ import java.util.Random;
  */
 public class GeneUtil {
 
+    public enum SelectionType{
+        ALL_EQUAL,
+        INCREMENTAL_REVERSE
+    }
+
+
     private ArrayList<ITerminal> terminals = new ArrayList<ITerminal>();
     private ArrayList<IFunction> functions = new ArrayList<IFunction>();
     private Random rand = new Random();
+    private double mutationChange = 0.5;
 
     public GeneUtil(ArrayList<ITerminal> terminals, ArrayList<IFunction> functions) {
         this.terminals = terminals;
@@ -29,7 +36,7 @@ public class GeneUtil {
         }
         if( depth == 1 )
         {
-            return new Node(this.getRandomTerminal());
+            return new Node(parent, this.getRandomTerminal());
         }
 
         Node node = new Node(parent, this.getRandomFunction());
@@ -52,13 +59,13 @@ public class GeneUtil {
         }
         if( depth == 1 )
         {
-            return new Node(this.getRandomTerminal());
+            return new Node(parent, this.getRandomTerminal());
         }
 
         int selection = rand.nextInt( this.terminals.size() + this.functions.size() );
 
         if(selection<this.terminals.size()){
-            return new Node(this.getRandomTerminal());
+            return new Node(parent, this.getRandomTerminal());
         }else{
 
             Node node = new Node(parent, this.getRandomFunction());
@@ -93,19 +100,28 @@ public class GeneUtil {
         return trees;
     }
 
+    /**
+     * Crossovers two trees, crossover points are selected randomly. Randomly selected leaf path is used for point
+     * selection. Path's all nodes have same selection probability. Thus shallow trees' root selection probability is
+     * higher than deeper trees.
+     * @param a a tree
+     * @param b another tree :D
+     */
     public void crossover(Tree a, Tree b){
-        Node sectionA = this.getRandomLocation(a.getRootNode());
-        Node sectionB = this.getRandomLocation(b.getRootNode());
+        Node sectionA = this.getRandomLocation(a.getRootNode(), SelectionType.ALL_EQUAL);
+        Node sectionB = this.getRandomLocation(b.getRootNode(), SelectionType.ALL_EQUAL);
 
         if ( sectionA == a.getRootNode() ){
             a.setRootNode(sectionB);
-        }
-        if ( sectionB == b.getRootNode() ){
-            b.setRootNode(sectionA);
+        }else{
+            sectionA.getParent().replaceChild(sectionA, sectionB);
         }
 
-        sectionA.getParent().replaceChild(sectionA, sectionB);
-        sectionB.getParent().replaceChild(sectionB, sectionA);
+        if ( sectionB == b.getRootNode() ){
+            b.setRootNode(sectionA);
+        }else{
+            sectionB.getParent().replaceChild(sectionB, sectionA);
+        }
 
         Node tempParNodeA = sectionA.getParent();
         sectionA.setParent(sectionB.getParent());
@@ -113,7 +129,17 @@ public class GeneUtil {
 
     }
 
-    private Node getRandomLocation(Node node){
+    public Node getRandomLocation(Tree tree, SelectionType selectionType){
+        return this.getRandomLocation(tree.getRootNode(), selectionType);
+    }
+
+    /**
+     * Selects a random node from genetic tree, can change the random node selection method with SelectionType enum.
+     * @param node  root node of the genetic tree
+     * @param selectionType effects the random node selection process
+     * @return  selects the randomly selected node from tree
+     */
+    private Node getRandomLocation(Node node, SelectionType selectionType){
 
         int pathDepth = 0;
         while(node.getNodeType() != NodeType.LEAF) {
@@ -125,13 +151,31 @@ public class GeneUtil {
             pathDepth++;
         }
 
-        int selected = rand.nextInt()%pathDepth;
+        int selected = 0;
+        switch (selectionType){
+            case ALL_EQUAL:
+                selected = 0;
+                if(pathDepth != 0) {
+                    selected = rand.nextInt(pathDepth);
+                }
+                break;
+            case INCREMENTAL_REVERSE:
+                selected = pathDepth;
+                while( ( this.rand.nextDouble() < this.mutationChange ) && (selected > 0) ){
+                    selected--;
+                }
+                break;
+        }
 
-        while ( selected > -1 ) {
+        while ( ( selected > 0 ) && ( node.getParent() != null ) ) {
             node = node.getParent();
             selected--;
         }
         return node;
+    }
+
+    public void mutation(Tree tree){
+        //TODO reverse selected added, use it
     }
 
 }

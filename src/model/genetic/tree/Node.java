@@ -21,7 +21,8 @@ public class Node {
         this.nodeType = NodeType.NODE;
     }
 
-    public Node(ITerminal terminal) {
+    public Node(Node parent, ITerminal terminal) {
+        this.parent = parent;
         this.terminal = terminal;
         this.nodeType = NodeType.LEAF;
     }
