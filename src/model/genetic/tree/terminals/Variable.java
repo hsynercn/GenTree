@@ -5,7 +5,7 @@ import model.genetic.tree.ITerminal;
 /**
  * Created by saruman on 2.07.2017.
  */
-public class Variable implements ITerminal{
+public class Variable implements ITerminal {
 
     private double value = 0.0;
     private String symbol = null;
@@ -21,12 +21,19 @@ public class Variable implements ITerminal{
     }
 
     @Override
+    public boolean setValue(double value) {
+        this.value = value;
+        return true;
+    }
+
+    @Override
     public String getSymbol() {
         return this.symbol;
     }
 
-    public void setValue(double value) {
-        this.value = value;
+    @Override
+    public ITerminal clone() {
+        return new Variable(this.getValue(), new String(this.symbol));
     }
 
     public void setSymbol(String symbol) {

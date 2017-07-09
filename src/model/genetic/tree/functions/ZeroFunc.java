@@ -17,4 +17,9 @@ public class ZeroFunc implements IFunction{
     public String getSymbol() {
         return this.getClass().getSimpleName();
     }
+
+    @Override
+    public IFunction clone() {
+        return new ZeroFunc();
+    }
 }

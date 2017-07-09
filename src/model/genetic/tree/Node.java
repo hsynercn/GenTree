@@ -5,43 +5,32 @@ package model.genetic.tree;
  */
 public class Node {
 
+    public enum NodeType {
+        NODE,
+        LEAF
+    }
+
     private Node parent = null;
     private Node leftChild = null;
     private Node rightChild = null;
     private NodeType nodeType = null;
 
-    private IFunction function = null;
-    private ITerminal terminal = null;
+    private String iFunctionID = null;
+    private String iTerminalDI = null;
 
 
 
-    public Node(Node parent, IFunction function) {
+    public Node(Node parent, String componenetId, NodeType nodeType) {
         this.parent = parent;
-        this.function = function;
-        this.nodeType = NodeType.NODE;
-    }
-
-    public Node(Node parent, ITerminal terminal) {
-        this.parent = parent;
-        this.terminal = terminal;
-        this.nodeType = NodeType.LEAF;
-    }
-
-    public double calculateNode() throws Exception {
-
-        if( this.nodeType == NodeType.LEAF )
+        this.nodeType = nodeType;
+        if(nodeType == NodeType.NODE){
+            this.iFunctionID = componenetId;
+        }else if(nodeType == NodeType.LEAF)
         {
-            return this.terminal.getValue();
-        }
-        else if( this.nodeType == NodeType.NODE )
-        {
-            return this.function.execute( this.leftChild.calculateNode(), this.rightChild.calculateNode() );
-        }
-        else
-        {
-            throw new Exception("Invalid node state, can`t calculate");
+            this.iTerminalDI = componenetId;
         }
     }
+
 
     public void setLeftChild(Node leftChild) {
         this.leftChild = leftChild;
@@ -49,14 +38,6 @@ public class Node {
 
     public void setRightChild(Node rightChild) {
         this.rightChild = rightChild;
-    }
-
-    public String getSymbol(){
-        if(this.nodeType == NodeType.NODE ){
-            return " { " + this.leftChild.getSymbol() + " " + this.function.getSymbol() + " " + this.rightChild.getSymbol() + " } ";
-        }else {
-            return this.terminal.getSymbol(); //NodeType.LEAF
-        }
     }
 
     public Node getLeftChild() {
@@ -79,12 +60,20 @@ public class Node {
         this.nodeType = nodeType;
     }
 
-    public void setFunction(IFunction function) {
-        this.function = function;
+    public void setiFunctionID(String iFunctionID) {
+        this.iFunctionID = iFunctionID;
     }
 
-    public void setTerminal(ITerminal terminal) {
-        this.terminal = terminal;
+    public void setiTerminalDI(String iTerminalDI) {
+        this.iTerminalDI = iTerminalDI;
+    }
+
+    public String getiFunctionID() {
+        return iFunctionID;
+    }
+
+    public String getiTerminalDI() {
+        return iTerminalDI;
     }
 
     public Node getParent() {

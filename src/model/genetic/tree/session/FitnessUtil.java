@@ -1,4 +1,4 @@
-package model.genetic.tree;
+package model.genetic.tree.session;
 
 import java.util.ArrayList;
 
@@ -7,7 +7,7 @@ import static java.lang.Math.abs;
 /**
  * Created by saruman on 6.07.2017.
  */
-public class ErrorCalculator {
+public class FitnessUtil {
 
     public static double regressionErrorSum(ArrayList<Double> results, ArrayList<Double> target){
 

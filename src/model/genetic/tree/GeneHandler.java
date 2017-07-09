@@ -1,27 +1,29 @@
 package model.genetic.tree;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Random;
 
 /**
  * Created by saruman on 3.07.2017.
  */
-public class GeneUtil {
+public class GeneHandler {
 
     public enum SelectionType{
         ALL_EQUAL,
         INCREMENTAL_REVERSE
     }
 
-
-    private ArrayList<ITerminal> terminals = new ArrayList<ITerminal>();
-    private ArrayList<IFunction> functions = new ArrayList<IFunction>();
     private Random rand = new Random();
     private double mutationChange = 0.5;
+    private int mutationMaxDepth = 5;
+    private ArrayList<String> terminalIDS = null;
+    private ArrayList<String> functionIDS = null;
 
-    public GeneUtil(ArrayList<ITerminal> terminals, ArrayList<IFunction> functions) {
-        this.terminals = terminals;
-        this.functions = functions;
+
+    public GeneHandler(SetPool setPool) {
+        this.terminalIDS = setPool.getITerminalIDs();
+        this.functionIDS = setPool.getIFuntionIDs();
     }
 
     public Tree generateFullTree(int depth){
@@ -36,10 +38,10 @@ public class GeneUtil {
         }
         if( depth == 1 )
         {
-            return new Node(parent, this.getRandomTerminal());
+            return new Node(parent, this.getRandomTerminal(), Node.NodeType.LEAF);
         }
 
-        Node node = new Node(parent, this.getRandomFunction());
+        Node node = new Node(parent, this.getRandomFunction(), Node.NodeType.NODE);
         Node leftNode = generateFullTree(depth-1, node);
         Node rightNode = generateFullTree(depth-1, node);
         node.setLeftChild(leftNode);
@@ -59,16 +61,16 @@ public class GeneUtil {
         }
         if( depth == 1 )
         {
-            return new Node(parent, this.getRandomTerminal());
+            return new Node(parent, this.getRandomTerminal(), Node.NodeType.LEAF);
         }
 
-        int selection = rand.nextInt( this.terminals.size() + this.functions.size() );
+        int selection = rand.nextInt( this.terminalIDS.size() + this.terminalIDS.size() );
 
-        if(selection<this.terminals.size()){
-            return new Node(parent, this.getRandomTerminal());
+        if(selection<this.terminalIDS.size()){
+            return new Node(parent, this.getRandomTerminal(), Node.NodeType.LEAF);
         }else{
 
-            Node node = new Node(parent, this.getRandomFunction());
+            Node node = new Node(parent, this.getRandomFunction(), Node.NodeType.NODE);
             Node leftNode = generateGrowTree(depth-1, node);
             Node rightNode = generateGrowTree(depth-1, node);
             node.setLeftChild(leftNode);
@@ -77,27 +79,13 @@ public class GeneUtil {
         }
     }
 
-    private IFunction getRandomFunction()
+    private String getRandomFunction()
     {
-        return this.functions.get(rand.nextInt(this.functions.size()));
+        return this.functionIDS.get(rand.nextInt(this.functionIDS.size()));
     }
-    private ITerminal getRandomTerminal()
+    private String getRandomTerminal()
     {
-        return this.terminals.get(rand.nextInt(this.terminals.size()));
-    }
-
-    public ArrayList<Tree> rampedHalfAndHalf(int populationSize, int maxDepth){
-        ArrayList<Tree> trees = new ArrayList<Tree>();
-
-        for (int i=0;i<populationSize;i++){
-            if( rand.nextInt()%2 == 0 ){
-                trees.add(this.generateFullTree(maxDepth));
-            }
-            else {
-                trees.add(this.generateGrowTree(maxDepth));
-            }
-        }
-        return trees;
+        return this.terminalIDS.get(rand.nextInt(this.terminalIDS.size()));
     }
 
     /**
@@ -142,7 +130,7 @@ public class GeneUtil {
     private Node getRandomLocation(Node node, SelectionType selectionType){
 
         int pathDepth = 0;
-        while(node.getNodeType() != NodeType.LEAF) {
+        while(node.getNodeType() != Node.NodeType.LEAF) {
             if ( rand.nextInt()%2 == 0 ){
                 node = node.getLeftChild();
             }else {
@@ -151,31 +139,52 @@ public class GeneUtil {
             pathDepth++;
         }
 
-        int selected = 0;
+        int selected = pathDepth;
         switch (selectionType){
             case ALL_EQUAL:
-                selected = 0;
                 if(pathDepth != 0) {
                     selected = rand.nextInt(pathDepth);
                 }
                 break;
             case INCREMENTAL_REVERSE:
-                selected = pathDepth;
                 while( ( this.rand.nextDouble() < this.mutationChange ) && (selected > 0) ){
                     selected--;
                 }
                 break;
         }
 
-        while ( ( selected > 0 ) && ( node.getParent() != null ) ) {
+        int reverseLevel = pathDepth;
+        while ( ( reverseLevel > selected ) && ( node.getParent() != null ) ) {
             node = node.getParent();
-            selected--;
+            reverseLevel--;
         }
         return node;
     }
 
+    public double getMutationChange() {
+        return mutationChange;
+    }
+
+    public int getMutationMaxDepth() {
+        return mutationMaxDepth;
+    }
+
+    public void setMutationMaxDepth(int mutationMaxDepth) {
+        this.mutationMaxDepth = mutationMaxDepth;
+    }
+
     public void mutation(Tree tree){
-        //TODO reverse selected added, use it
+
+        Node mutationPoint = this.getRandomLocation(tree, SelectionType.INCREMENTAL_REVERSE);
+        if( mutationPoint == tree.getRootNode()){
+            tree.setRootNode(this.generateGrowTree(this.mutationMaxDepth, null));
+        }else {
+            Node mutatedPart = this.generateGrowTree(this.mutationMaxDepth, null);
+            mutationPoint.getParent().replaceChild(mutationPoint, mutatedPart);
+            mutatedPart.setParent(mutationPoint.getParent());
+            mutationPoint.setParent(null);
+        }
+
     }
 
 }

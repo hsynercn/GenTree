@@ -6,4 +6,5 @@ package model.genetic.tree;
 public interface IFunction {
     public double execute(double varA, double varB);
     public String getSymbol();
+    public IFunction clone();
 }

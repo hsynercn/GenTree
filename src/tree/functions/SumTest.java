@@ -1,4 +1,4 @@
-package ut.model.genetic.tree.functions;
+package tree.functions;
 
 import junit.framework.TestCase;
 import model.genetic.tree.functions.Sum;

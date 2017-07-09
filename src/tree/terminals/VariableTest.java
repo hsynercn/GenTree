@@ -1,4 +1,4 @@
-package ut.model.genetic.tree.terminals;
+package tree.terminals;
 
 import junit.framework.TestCase;
 import model.genetic.tree.terminals.Variable;

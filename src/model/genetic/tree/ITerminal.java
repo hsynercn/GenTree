@@ -5,5 +5,7 @@ package model.genetic.tree;
  */
 public interface ITerminal {
     public double getValue();
+    public boolean setValue(double value);
     public String getSymbol();
+    public ITerminal clone();
 }
