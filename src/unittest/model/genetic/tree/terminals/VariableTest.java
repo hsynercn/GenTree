@@ -1,4 +1,4 @@
-package tree.terminals;
+package unittest.model.genetic.tree.terminals;
 
 import junit.framework.TestCase;
 import model.genetic.tree.terminals.Variable;

@@ -1,6 +1,7 @@
-package tree.functions;
+package unittest.model.genetic.tree.functions;
 
 import junit.framework.TestCase;
+import model.genetic.tree.IFunction;
 import model.genetic.tree.functions.Div;
 
 /**
@@ -19,6 +20,11 @@ public class DivTest extends TestCase {
         Div myDiv = new Div();
 
         assertEquals("Div", myDiv.getSymbol());
+    }
+
+    public void testClone() throws Exception {
+        Div myDiv = new Div();
+        assertTrue(myDiv.clone() instanceof Div);
     }
 
 }

@@ -10,12 +10,10 @@ public class SetPool {
 
     private HashMap<String, IFunction> functionHashMap = new HashMap<String, IFunction>();
     private HashMap<String, ITerminal> terminalHashMap = new HashMap<String, ITerminal>();
-    private ArrayList<String> variables = new ArrayList<String>();
 
-    public SetPool(HashMap<String, IFunction> functionHashMap, HashMap<String, ITerminal> terminalHashMap, ArrayList<String> variables) {
+    public SetPool(HashMap<String, IFunction> functionHashMap, HashMap<String, ITerminal> terminalHashMap) {
         this.functionHashMap = functionHashMap;
         this.terminalHashMap = terminalHashMap;
-        this.variables = variables;
     }
 
     public SetPool clone(){
@@ -30,29 +28,10 @@ public class SetPool {
             newTerminalHashMap.put(tempKey, this.terminalHashMap.get(tempKey).clone());
         }
 
-        return new SetPool(newFunctionHashMap, newTerminalHashMap, this.variables);
+        return new SetPool(newFunctionHashMap, newTerminalHashMap);
 
     }
 
-    //TODO add test for this method
-    public boolean addIFunction(IFunction iFunction, String key){
-        if(this.functionHashMap.containsKey(key)){
-            return false;
-        }else {
-            this.functionHashMap.put(key, iFunction);
-            return true;
-        }
-    }
-
-    //TODO add test for this method
-    public boolean addITerminal(ITerminal iTerminal, String key){
-        if(this.terminalHashMap.containsKey(key)){
-            return false;
-        }else{
-            this.terminalHashMap.put(key, iTerminal);
-            return true;
-        }
-    }
 
     public IFunction getIFunction(String key){
         return this.functionHashMap.get(key);

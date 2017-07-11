@@ -16,7 +16,7 @@ public class Node {
     private NodeType nodeType = null;
 
     private String iFunctionID = null;
-    private String iTerminalDI = null;
+    private String iTerminalID = null;
 
 
 
@@ -27,7 +27,7 @@ public class Node {
             this.iFunctionID = componenetId;
         }else if(nodeType == NodeType.LEAF)
         {
-            this.iTerminalDI = componenetId;
+            this.iTerminalID = componenetId;
         }
     }
 
@@ -56,24 +56,12 @@ public class Node {
         this.parent = parent;
     }
 
-    public void setNodeType(NodeType nodeType) {
-        this.nodeType = nodeType;
-    }
-
-    public void setiFunctionID(String iFunctionID) {
-        this.iFunctionID = iFunctionID;
-    }
-
-    public void setiTerminalDI(String iTerminalDI) {
-        this.iTerminalDI = iTerminalDI;
-    }
-
     public String getiFunctionID() {
         return iFunctionID;
     }
 
-    public String getiTerminalDI() {
-        return iTerminalDI;
+    public String getiTerminalID() {
+        return iTerminalID;
     }
 
     public Node getParent() {

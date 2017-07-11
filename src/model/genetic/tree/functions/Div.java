@@ -18,7 +18,7 @@ public class Div extends ZeroFunc {
 
     @Override
     public IFunction clone(){
-        return new Mul();
+        return new Div();
     }
 
 }

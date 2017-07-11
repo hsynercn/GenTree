@@ -6,11 +6,11 @@ import java.util.ArrayList;
 /**
  * Created by saruman on 9.07.2017.
  */
-public class TerminalValSet {
+public class Input {
     private String iTerminalId = null;
     private ArrayList<Double> values = null;
 
-    public TerminalValSet(String iTerminalId, ArrayList<Double> values) {
+    public Input(String iTerminalId, ArrayList<Double> values) {
         this.iTerminalId = iTerminalId;
         this.values = values;
     }

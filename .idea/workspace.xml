@@ -2,41 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6aeb7351-c2f2-4793-b33b-caa15331ad69" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/genetic/tree/Population.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/genetic/tree/SetPool.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/genetic/tree/session/TerminalValSet.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/model/genetic/tree/ErrorCalculator.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/model/genetic/tree/GeneUtil.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/model/genetic/tree/GeneticSession.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/model/genetic/tree/NodeType.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ut/model/genetic/tree/ErrorCalculatorTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ut/model/genetic/tree/GeneUtilTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ut/model/genetic/tree/NodeTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ut/model/genetic/tree/functions/DivTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ut/model/genetic/tree/functions/MulTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ut/model/genetic/tree/functions/SubTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ut/model/genetic/tree/functions/SumTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ut/model/genetic/tree/terminals/ConstantTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ut/model/genetic/tree/terminals/VariableTest.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/model/genetic/tree/ErrorCalculator.java" afterPath="$PROJECT_DIR$/src/model/genetic/tree/session/FitnessUtil.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/model/genetic/tree/GeneUtil.java" afterPath="$PROJECT_DIR$/src/model/genetic/tree/GeneHandler.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ut/model/genetic/tree/functions/DivTest.java" afterPath="$PROJECT_DIR$/src/tree/functions/DivTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ut/model/genetic/tree/functions/MulTest.java" afterPath="$PROJECT_DIR$/src/tree/functions/MulTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ut/model/genetic/tree/functions/SubTest.java" afterPath="$PROJECT_DIR$/src/tree/functions/SubTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ut/model/genetic/tree/functions/SumTest.java" afterPath="$PROJECT_DIR$/src/tree/functions/SumTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ut/model/genetic/tree/terminals/ConstantTest.java" afterPath="$PROJECT_DIR$/src/tree/terminals/ConstantTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ut/model/genetic/tree/terminals/VariableTest.java" afterPath="$PROJECT_DIR$/src/tree/terminals/VariableTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/genetic/tree/GenePool.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/genetic/tree/session/FitnessRunnable.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/genetic/tree/session/Input.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/genetic/tree/session/Population.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/genetic/tree/session/PopulationGenerator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/genetic/tree/session/TrainingSet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/unittest/model/genetic/tree/GenePoolTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/unittest/model/genetic/tree/NodeTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/unittest/model/genetic/tree/SetPoolTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/unittest/model/genetic/tree/TreeTest.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/model/genetic/tree/GeneHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/model/genetic/tree/Population.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/model/genetic/tree/session/FitnessUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/model/genetic/tree/session/TerminalValSet.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tree/functions/DivTest.java" afterPath="$PROJECT_DIR$/src/unittest/model/genetic/tree/functions/DivTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tree/functions/MulTest.java" afterPath="$PROJECT_DIR$/src/unittest/model/genetic/tree/functions/MulTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tree/functions/SubTest.java" afterPath="$PROJECT_DIR$/src/unittest/model/genetic/tree/functions/SubTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tree/functions/SumTest.java" afterPath="$PROJECT_DIR$/src/unittest/model/genetic/tree/functions/SumTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tree/terminals/ConstantTest.java" afterPath="$PROJECT_DIR$/src/unittest/model/genetic/tree/terminals/ConstantTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tree/terminals/VariableTest.java" afterPath="$PROJECT_DIR$/src/unittest/model/genetic/tree/terminals/VariableTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/genetic/tree/IFunction.java" afterPath="$PROJECT_DIR$/src/model/genetic/tree/IFunction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/genetic/tree/ITerminal.java" afterPath="$PROJECT_DIR$/src/model/genetic/tree/ITerminal.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/genetic/tree/Node.java" afterPath="$PROJECT_DIR$/src/model/genetic/tree/Node.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/genetic/tree/SetPool.java" afterPath="$PROJECT_DIR$/src/model/genetic/tree/SetPool.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/genetic/tree/functions/Div.java" afterPath="$PROJECT_DIR$/src/model/genetic/tree/functions/Div.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/genetic/tree/functions/Mul.java" afterPath="$PROJECT_DIR$/src/model/genetic/tree/functions/Mul.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/genetic/tree/functions/Sub.java" afterPath="$PROJECT_DIR$/src/model/genetic/tree/functions/Sub.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/genetic/tree/functions/Sum.java" afterPath="$PROJECT_DIR$/src/model/genetic/tree/functions/Sum.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/genetic/tree/functions/ZeroFunc.java" afterPath="$PROJECT_DIR$/src/model/genetic/tree/functions/ZeroFunc.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/genetic/tree/terminals/Constant.java" afterPath="$PROJECT_DIR$/src/model/genetic/tree/terminals/Constant.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/genetic/tree/terminals/Variable.java" afterPath="$PROJECT_DIR$/src/model/genetic/tree/terminals/Variable.java" />
     </list>
     <ignored path="GenTree.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -63,11 +52,104 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DivTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/tree/functions/DivTest.java">
+      <file leaf-file-name="ConstantTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/unittest/model/genetic/tree/terminals/ConstantTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="476">
+              <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VariableTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/unittest/model/genetic/tree/terminals/VariableTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GenePoolTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/unittest/model/genetic/tree/GenePoolTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="612">
+              <caret line="36" column="1" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FitnessRunnable.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/session/FitnessRunnable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="49" column="39" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NodeTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/unittest/model/genetic/tree/NodeTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="35" column="48" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SetPoolTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/unittest/model/genetic/tree/SetPoolTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="578">
+              <caret line="46" column="57" selection-start-line="46" selection-start-column="57" selection-end-line="46" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TreeTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/unittest/model/genetic/tree/TreeTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SetPool.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/SetPool.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+              <folding>
+                <element signature="e#643#662#0" expanded="true" />
+                <element signature="e#733#752#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GenePool.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/GenePool.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-51">
+              <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Div.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/functions/Div.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -98,8 +180,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/ut/model/genetic/tree/functions/VariableTest.groovy" />
-        <option value="$PROJECT_DIR$/src/ut/model/genetic/tree/functions/VariableTest.java" />
         <option value="$PROJECT_DIR$/src/model/genetic/tree/functions/DivTest.java" />
         <option value="$PROJECT_DIR$/src/ut/model/genetic/tree/functions/DivTest.java" />
         <option value="$PROJECT_DIR$/src/model/genetic/tree/functions/MulTest.java" />
@@ -149,6 +229,8 @@
         <option value="$PROJECT_DIR$/src/model/genetic/tree/functions/IFunction.java" />
         <option value="$PROJECT_DIR$/src/model/genetic/tree/GeneSet.java" />
         <option value="$PROJECT_DIR$/src/model/genetic/tree/sessions/FitnessUtil.java" />
+        <option value="$PROJECT_DIR$/src/model/genetic/tree/SetPool.java" />
+        <option value="$PROJECT_DIR$/src/model/genetic/tree/session/FitnessRunnable.java" />
       </list>
     </option>
   </component>
@@ -189,9 +271,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -207,6 +286,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="GenTree" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GenTree" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GenTree" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tree" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -340,6 +437,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1024,7 +1124,8 @@
       <workItem from="1499352077900" duration="12587000" />
       <workItem from="1499454039144" duration="606000" />
       <workItem from="1499536520248" duration="13201000" />
-      <workItem from="1499582431839" duration="27054000" />
+      <workItem from="1499582431839" duration="27654000" />
+      <workItem from="1499811075673" duration="711000" />
     </task>
     <servers />
   </component>
@@ -1061,31 +1162,30 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88062000" />
+    <option name="totallyTimeSpent" value="89373000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10570825" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10570825" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39957717" sideWeight="0.50208336" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33615223" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16145833" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16145833" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1097,6 +1197,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19114584" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1121,125 +1222,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/NodeType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/functions/IFunction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/terminals/ITerminal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/terminals/Constant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/functions/Sum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/functions/Sub.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="12" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/functions/Mul.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="10" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/functions/Div.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/functions/ZeroFunc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/terminals/ITerminal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ut/model/genetic/tree/functions/VariableTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/ut/model/genetic/tree/functions/holdonn.java" />
-    <entry file="file://$PROJECT_DIR$/src/ut/model/genetic/tree/functions/VariableTest.groovy" />
-    <entry file="file://$PROJECT_DIR$/src/ut/model/genetic/tree/functions/holdon.java" />
-    <entry file="file://$PROJECT_DIR$/src/ut/model/genetic/tree/functions/VariableTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/functions/Sub.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="16" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ut/model/genetic/tree/functions/MulTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="20" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ut/model/genetic/tree/functions/SubTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="20" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ut/model/genetic/tree/functions/SumTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ut/model/genetic/tree/functions/SubTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/ut/model/genetic/tree/functions/SumTest.java" />
     <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/package-info.java" />
-    <entry file="file://$PROJECT_DIR$/src/ut/model/genetic/tree/terminals/ConstantTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ut/model/genetic/tree/terminals/ConstantTest.java" />
     <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/terminals/VariableTest.java" />
     <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/functions/ZeroFunc.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1249,29 +1235,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/functions/Div.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/GenePool.java" />
     <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/GeneManipulator.java" />
-    <entry file="file://$PROJECT_DIR$/src/ut/model/genetic/tree/FitnessUtilTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="26" column="38" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ut/model/genetic/tree/FitnessUtilTest.java" />
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit.jar!/junit/framework/TestCase.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1283,38 +1252,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ut/model/genetic/tree/GeneSetTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="35" column="2" selection-start-line="35" selection-start-column="2" selection-end-line="35" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ut/model/genetic/tree/NodeTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ut/model/genetic/tree/sessions/PopulationGeneratorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="41" column="30" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/terminals/ITerminal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ut/model/genetic/tree/GeneSetTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/ut/model/genetic/tree/NodeTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/ut/model/genetic/tree/sessions/PopulationGeneratorTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/terminals/ITerminal.java" />
     <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/terminals/Constant.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1339,22 +1280,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/functions/IFunction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/NodeType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="8" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/functions/IFunction.java" />
+    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/NodeType.java" />
     <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/Tree.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1363,14 +1290,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/sessions/PopulationGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/sessions/PopulationGenerator.java" />
     <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/Node.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
@@ -1379,82 +1299,174 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/sessions/FitnessUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/GeneSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1877">
-          <caret line="41" column="78" selection-start-line="41" selection-start-column="78" selection-end-line="41" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ut/model/genetic/tree/terminals/ConstantTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ut/model/genetic/tree/terminals/VariableTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ut/model/genetic/tree/functions/DivTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="21" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/sessions/TrainingDataSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="90" selection-start-line="15" selection-start-column="90" selection-end-line="15" selection-end-column="90" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/sessions/GeneticRegressionSession.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/sessions/DataSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="94" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/sessions/TerminalValSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/sessions/FitnessUtil.java" />
+    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/GeneSet.java" />
+    <entry file="file://$PROJECT_DIR$/src/ut/model/genetic/tree/terminals/ConstantTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/ut/model/genetic/tree/terminals/VariableTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/ut/model/genetic/tree/functions/DivTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/sessions/TrainingDataSet.java" />
+    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/sessions/GeneticRegressionSession.java" />
+    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/sessions/DataSet.java" />
+    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/sessions/TerminalValSet.java" />
     <entry file="file://$PROJECT_DIR$/src/tree/functions/DivTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/session/Input.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/session/Population.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/session/TrainingSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/session/PopulationGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="38" column="38" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/unittest/model/genetic/tree/functions/DivTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/unittest/model/genetic/tree/functions/MulTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/unittest/model/genetic/tree/functions/SubTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/unittest/model/genetic/tree/functions/SumTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/unittest/model/genetic/tree/terminals/ConstantTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/unittest/model/genetic/tree/terminals/VariableTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/unittest/model/genetic/tree/NodeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="35" column="48" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/unittest/model/genetic/tree/SetPoolTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="46" column="57" selection-start-line="46" selection-start-column="57" selection-end-line="46" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/functions/Div.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/Population.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/unittest/model/genetic/tree/TreeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/SetPool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <element signature="e#643#662#0" expanded="true" />
+            <element signature="e#733#752#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/GenePool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51">
+          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/unittest/model/genetic/tree/GenePoolTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="1" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/session/FitnessRunnable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="49" column="39" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
           <folding />
         </state>
       </provider>

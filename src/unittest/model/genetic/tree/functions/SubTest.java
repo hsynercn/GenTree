@@ -1,6 +1,8 @@
-package tree.functions;
+package unittest.model.genetic.tree.functions;
 
 import junit.framework.TestCase;
+import model.genetic.tree.IFunction;
+import model.genetic.tree.functions.Mul;
 import model.genetic.tree.functions.Sub;
 
 /**
@@ -9,15 +11,16 @@ import model.genetic.tree.functions.Sub;
 public class SubTest extends TestCase {
     public void testExecute() throws Exception {
         Sub mySub = new Sub();
-
         assertEquals(8.0, mySub.execute(10.0, 2.0));
-
     }
 
     public void testGetSymbol() throws Exception {
         Sub mySub = new Sub();
-
         assertEquals("Sub", mySub.getSymbol());
     }
 
+    public void testClone() throws Exception {
+        Sub mySub = new Sub();
+        assertTrue(mySub.clone() instanceof Sub);
+    }
 }

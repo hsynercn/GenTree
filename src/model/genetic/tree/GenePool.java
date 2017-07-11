@@ -7,7 +7,7 @@ import java.util.Random;
 /**
  * Created by saruman on 3.07.2017.
  */
-public class GeneHandler {
+public class GenePool {
 
     public enum SelectionType{
         ALL_EQUAL,
@@ -21,7 +21,7 @@ public class GeneHandler {
     private ArrayList<String> functionIDS = null;
 
 
-    public GeneHandler(SetPool setPool) {
+    public GenePool(SetPool setPool) {
         this.terminalIDS = setPool.getITerminalIDs();
         this.functionIDS = setPool.getIFuntionIDs();
     }
@@ -34,7 +34,7 @@ public class GeneHandler {
     {
         if( depth <= 0 )
         {
-            throw new IllegalArgumentException("Full tree generation: Invalid tree depth:"+depth);
+            throw new IllegalArgumentException("Full UT.model.genetic.tree generation: Invalid UT.model.genetic.tree depth:"+depth);
         }
         if( depth == 1 )
         {
@@ -57,7 +57,7 @@ public class GeneHandler {
 
         if( depth <= 0 )
         {
-            throw new IllegalArgumentException("Grow tree generation: Invalid tree depth:"+depth);
+            throw new IllegalArgumentException("Grow UT.model.genetic.tree generation: Invalid UT.model.genetic.tree depth:"+depth);
         }
         if( depth == 1 )
         {
@@ -92,8 +92,8 @@ public class GeneHandler {
      * Crossovers two trees, crossover points are selected randomly. Randomly selected leaf path is used for point
      * selection. Path's all nodes have same selection probability. Thus shallow trees' root selection probability is
      * higher than deeper trees.
-     * @param a a tree
-     * @param b another tree :D
+     * @param a a UT.model.genetic.tree
+     * @param b another UT.model.genetic.tree :D
      */
     public void crossover(Tree a, Tree b){
         Node sectionA = this.getRandomLocation(a.getRootNode(), SelectionType.ALL_EQUAL);
@@ -117,15 +117,15 @@ public class GeneHandler {
 
     }
 
-    public Node getRandomLocation(Tree tree, SelectionType selectionType){
+    private Node getRandomLocation(Tree tree, SelectionType selectionType){
         return this.getRandomLocation(tree.getRootNode(), selectionType);
     }
 
     /**
-     * Selects a random node from genetic tree, can change the random node selection method with SelectionType enum.
-     * @param node  root node of the genetic tree
+     * Selects a random node from genetic UT.model.genetic.tree, can change the random node selection method with SelectionType enum.
+     * @param node  root node of the genetic UT.model.genetic.tree
      * @param selectionType effects the random node selection process
-     * @return  selects the randomly selected node from tree
+     * @return  selects the randomly selected node from UT.model.genetic.tree
      */
     private Node getRandomLocation(Node node, SelectionType selectionType){
 
