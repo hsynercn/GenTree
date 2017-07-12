@@ -23,4 +23,16 @@ public class TreeTest extends TestCase {
         assertEquals(node2, tree.getRootNode());
     }
 
+    public void testGetNodeCount(){
+        Node node = new Node(null, "function", Node.NodeType.NODE);
+        Node terminalLeft = new Node(null, "terminal", Node.NodeType.LEAF);
+        Node terminalRight = new Node(null, "terminal", Node.NodeType.LEAF);
+
+        node.setLeftChild(terminalLeft);
+        node.setRightChild(terminalRight);
+
+        Tree tree = new Tree(node);
+        assertEquals(3, tree.getNodeCount());
+    }
+
 }

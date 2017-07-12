@@ -21,9 +21,9 @@ public class GenePool {
     private ArrayList<String> functionIDS = null;
 
 
-    public GenePool(SetPool setPool) {
-        this.terminalIDS = setPool.getITerminalIDs();
-        this.functionIDS = setPool.getIFuntionIDs();
+    public GenePool(ArrayList<String> terminalIDS, ArrayList<String> functionIDS) {
+        this.terminalIDS = terminalIDS;
+        this.functionIDS = functionIDS;
     }
 
     public Tree generateFullTree(int depth){
@@ -113,7 +113,7 @@ public class GenePool {
 
         Node tempParNodeA = sectionA.getParent();
         sectionA.setParent(sectionB.getParent());
-        sectionB.setParent(tempParNodeA.getParent());
+        sectionB.setParent(tempParNodeA);
 
     }
 
@@ -161,18 +161,6 @@ public class GenePool {
         return node;
     }
 
-    public double getMutationChange() {
-        return mutationChange;
-    }
-
-    public int getMutationMaxDepth() {
-        return mutationMaxDepth;
-    }
-
-    public void setMutationMaxDepth(int mutationMaxDepth) {
-        this.mutationMaxDepth = mutationMaxDepth;
-    }
-
     public void mutation(Tree tree){
 
         Node mutationPoint = this.getRandomLocation(tree, SelectionType.INCREMENTAL_REVERSE);
@@ -184,7 +172,5 @@ public class GenePool {
             mutatedPart.setParent(mutationPoint.getParent());
             mutationPoint.setParent(null);
         }
-
     }
-
 }

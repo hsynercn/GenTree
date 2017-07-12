@@ -17,7 +17,7 @@ public class PopulationGenerator {
         RAMPED_HALF_AND_HALF
     }
 
-    public  Population generate(PopulationType populationType, GenePool genePool, SetPool setPool, int populationSize, int depth){
+    public  static Population generate(PopulationType populationType, GenePool genePool, SetPool setPool, int populationSize, int depth){
 
         ArrayList<Tree> individuals = new ArrayList<Tree>();
 

@@ -18,4 +18,17 @@ public class Tree {
     public void setRootNode(Node rootNode) {
         this.rootNode = rootNode;
     }
+
+    public int getNodeCount(){
+        return travelNodes(this.rootNode);
+    }
+
+    private int travelNodes(Node node){
+        if(node.getNodeType() == Node.NodeType.NODE){
+            return 1 + this.travelNodes(node.getLeftChild()) + this.travelNodes(node.getRightChild());
+        }else {
+            return 1;
+        }
+    }
+
 }

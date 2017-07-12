@@ -32,7 +32,6 @@ public class SetPool {
 
     }
 
-
     public IFunction getIFunction(String key){
         return this.functionHashMap.get(key);
     }
@@ -41,7 +40,6 @@ public class SetPool {
         return this.terminalHashMap.get(key);
     }
 
-    //TODO add test for this method
     public boolean updateITerminalValue(String key, double newValue){
         if(this.terminalHashMap.containsKey(key)){
             return this.terminalHashMap.get(key).setValue(newValue);
@@ -57,6 +55,5 @@ public class SetPool {
     public ArrayList<String> getIFuntionIDs(){
         return new ArrayList<String>( this.functionHashMap.keySet() );
     }
-
 
 }
