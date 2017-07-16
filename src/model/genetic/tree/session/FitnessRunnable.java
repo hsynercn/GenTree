@@ -12,7 +12,7 @@ public class FitnessRunnable implements Runnable {
     private Population population;
     private TrainingSet trainingSet;
     private boolean resultReady;
-    private double[] errros = null;
+    private double[] errors = null;
 
     public FitnessRunnable(Population population, TrainingSet trainingSet) {
         this.population = population;
@@ -24,21 +24,21 @@ public class FitnessRunnable implements Runnable {
     @Override
     public void run() {
         this.resultReady = false;
-        this.errros = this.populationError(this.population,this.trainingSet);
+        this.errors = this.populationError(this.population,this.trainingSet);
         this.resultReady = true;
     }
 
-    public double[] getErrros() {
-        return errros;
+    public double[] getErrors() {
+        return errors;
     }
 
-    private double[] populationError(Population population, TrainingSet trainingSet){
+    public double[] populationError(Population population, TrainingSet trainingSet){
         double[] errros = new double[population.getPopulationSize()];
         double[] tempResults = new double[population.getPopulationSize()];
         int sampeCount = trainingSet.getSampeCount();
         int i = 0;
         while (i<sampeCount){
-            this.updateInputValues(population,trainingSet,sampeCount);
+            this.updateInputValues(population,trainingSet,i);
 
             try {
                 tempResults = population.calculateTrees();
@@ -47,8 +47,9 @@ public class FitnessRunnable implements Runnable {
             }
 
             for (int j = 0; j<errros.length; j++){
-                errros[j] = errros[j] + tempResults[j];
+                errros[j] = errros[j] + ( trainingSet.getTargetValue(i) - tempResults[j] );
             }
+            i++;
         }
 
         return errros;
@@ -57,7 +58,7 @@ public class FitnessRunnable implements Runnable {
     private void updateInputValues(Population population, TrainingSet trainingSet, int valueIndex){
         boolean check = true;
         for(Input input: trainingSet.getInputs()){
-                check = population.getSetPool().updateITerminalValue(input.getiTerminalId(), input.getValues().get(valueIndex));
+                check = population.getSetPool().updateITerminalValue(input.getiTerminalId(), input.getValues()[valueIndex]);
                 if( check == false){
                     throw new IllegalArgumentException("Fitness calculation: Can't update the terminal value, invalid terminal id.");
                 }
