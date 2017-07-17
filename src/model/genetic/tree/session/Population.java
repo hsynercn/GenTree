@@ -58,4 +58,8 @@ public class Population {
             throw new Exception("Invalid node state, can`t calculate");
         }
     }
+
+    public ArrayList<Tree> getTrees() {
+        return trees;
+    }
 }

@@ -14,7 +14,7 @@ public class GenePool {
         INCREMENTAL_REVERSE
     }
 
-    private Random rand = new Random();
+    private Random rand;
     private double mutationChange = 0.5;
     private int mutationMaxDepth = 5;
     private ArrayList<String> terminalIDS = null;
@@ -24,6 +24,7 @@ public class GenePool {
     public GenePool(ArrayList<String> terminalIDS, ArrayList<String> functionIDS) {
         this.terminalIDS = terminalIDS;
         this.functionIDS = functionIDS;
+        rand = new Random();
     }
 
     public Tree generateFullTree(int depth){

@@ -31,4 +31,16 @@ public class Tree {
         }
     }
 
+    public String getTreeExpression(){
+        return this.getNodeExpression(this.rootNode);
+    }
+
+    private String getNodeExpression(Node node){
+        if(node.getNodeType() == Node.NodeType.NODE){
+            return "( " + this.getNodeExpression(node.getLeftChild()) + " " + node.getiFunctionID() + " " + this.getNodeExpression(node.getRightChild()) + " )" ;
+        }else {
+            return node.getiTerminalID();
+        }
+    }
+
 }

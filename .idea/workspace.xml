@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6aeb7351-c2f2-4793-b33b-caa15331ad69" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/unittest/model/genetic/tree/session/FitnessRunnableTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/unittest/model/genetic/tree/session/InputTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/unittest/model/genetic/tree/session/TrainingSetTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/genetic/tree/session/FitnessRunnable.java" afterPath="$PROJECT_DIR$/src/model/genetic/tree/session/FitnessRunnable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/genetic/tree/session/Input.java" afterPath="$PROJECT_DIR$/src/model/genetic/tree/session/Input.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/genetic/tree/session/TrainingSet.java" afterPath="$PROJECT_DIR$/src/model/genetic/tree/session/TrainingSet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/unittest/model/genetic/tree/session/PopulationTest.java" afterPath="$PROJECT_DIR$/src/unittest/model/genetic/tree/session/PopulationTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/genetic/tree/GenePool.java" afterPath="$PROJECT_DIR$/src/model/genetic/tree/GenePool.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/genetic/tree/Tree.java" afterPath="$PROJECT_DIR$/src/model/genetic/tree/Tree.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/genetic/tree/session/Population.java" afterPath="$PROJECT_DIR$/src/model/genetic/tree/session/Population.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/unittest/model/genetic/tree/session/FitnessRunnableTest.java" afterPath="$PROJECT_DIR$/src/unittest/model/genetic/tree/session/FitnessRunnableTest.java" />
     </list>
     <ignored path="GenTree.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,13 +31,15 @@
     <window id="1">
       <content type="file-editors">
         <state>
-          <leaf>
+          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
             <file leaf-file-name="Population.java" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/session/Population.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="115">
-                    <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
-                    <folding />
+                  <state relative-caret-position="812">
+                    <caret line="61" column="39" selection-start-line="61" selection-start-column="39" selection-end-line="61" selection-end-column="39" />
+                    <folding>
+                      <element signature="e#1667#1668#0" expanded="true" />
+                    </folding>
                   </state>
                 </provider>
               </entry>
@@ -48,13 +47,10 @@
             <file leaf-file-name="FitnessRunnableTest.java" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/unittest/model/genetic/tree/session/FitnessRunnableTest.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="591">
-                    <caret line="68" column="18" selection-start-line="68" selection-start-column="16" selection-end-line="68" selection-end-column="23" />
+                  <state relative-caret-position="1033">
+                    <caret line="89" column="23" selection-start-line="89" selection-start-column="23" selection-end-line="89" selection-end-column="23" />
                     <folding>
                       <element signature="imports" expanded="true" />
-                      <element signature="e#780#788#0" expanded="true" />
-                      <element signature="e#847#855#0" expanded="true" />
-                      <element signature="e#1455#1462#0" expanded="true" />
                     </folding>
                   </state>
                 </provider>
@@ -63,12 +59,10 @@
             <file leaf-file-name="PopulationTest.java" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/src/unittest/model/genetic/tree/session/PopulationTest.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="608">
+                  <state relative-caret-position="850">
                     <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
                     <folding>
                       <element signature="imports" expanded="true" />
-                      <element signature="e#967#975#0" expanded="true" />
-                      <element signature="e#1034#1042#0" expanded="true" />
                     </folding>
                   </state>
                 </provider>
@@ -77,7 +71,7 @@
             <file leaf-file-name="InputTest.java" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/src/unittest/model/genetic/tree/session/InputTest.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="136">
+                  <state relative-caret-position="119">
                     <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
                     <folding>
                       <element signature="imports" expanded="true" />
@@ -89,11 +83,10 @@
             <file leaf-file-name="TrainingSetTest.java" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/src/unittest/model/genetic/tree/session/TrainingSetTest.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="510">
+                  <state relative-caret-position="476">
                     <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="66" />
                     <folding>
                       <element signature="imports" expanded="true" />
-                      <element signature="e#793#800#0" expanded="true" />
                     </folding>
                   </state>
                 </provider>
@@ -113,11 +106,9 @@
       <file leaf-file-name="GenePoolTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/unittest/model/genetic/tree/GenePoolTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
+            <state relative-caret-position="425">
               <caret line="35" column="54" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
-              <folding>
-                <element signature="e#550#558#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -125,9 +116,26 @@
       <file leaf-file-name="PopulationGenerator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/session/PopulationGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="654">
-              <caret line="49" column="30" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
+            <state relative-caret-position="374">
+              <caret line="35" column="61" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="61" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GenePool.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/GenePool.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="158" column="36" selection-start-line="158" selection-start-column="36" selection-end-line="158" selection-end-column="36" />
+              <folding>
+                <element signature="e#712#713#0" expanded="true" />
+                <element signature="e#781#782#0" expanded="true" />
+                <element signature="e#2558#2559#0" expanded="true" />
+                <element signature="e#2640#2641#0" expanded="true" />
+                <element signature="e#2685#2686#0" expanded="true" />
+                <element signature="e#2767#2768#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -142,12 +150,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FitnessRunnable.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FitnessRunnable.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/session/FitnessRunnable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
+            <state relative-caret-position="510">
               <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-              <folding />
+              <folding>
+                <element signature="e#827#828#0" expanded="true" />
+                <element signature="e#856#857#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Tree.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/Tree.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="34" column="53" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
+              <folding>
+                <element signature="e#715#716#0" expanded="true" />
+                <element signature="e#775#776#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -155,7 +179,7 @@
       <file leaf-file-name="TrainingSet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/session/TrainingSet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
+            <state relative-caret-position="289">
               <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -173,7 +197,7 @@
       <file leaf-file-name="SetPool.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/SetPool.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
+            <state relative-caret-position="493">
               <caret line="30" column="67" selection-start-line="30" selection-start-column="67" selection-end-line="30" selection-end-column="67" />
               <folding>
                 <element signature="e#1195#1196#0" expanded="true" />
@@ -188,21 +212,19 @@
       <file leaf-file-name="PopulationTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/unittest/model/genetic/tree/session/PopulationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="620">
+            <state relative-caret-position="646">
               <caret line="53" column="34" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#967#975#0" expanded="true" />
-                <element signature="e#1034#1042#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PopulationGeneratorTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PopulationGeneratorTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/unittest/model/genetic/tree/session/PopulationGeneratorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
+            <state relative-caret-position="259">
               <caret line="49" column="132" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="132" />
               <folding />
             </state>
@@ -234,7 +256,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/model/genetic/tree/terminals/ConstantTest.java" />
         <option value="$PROJECT_DIR$/src/model/genetic/tree/terminals/Constant.java" />
         <option value="$PROJECT_DIR$/src/ut/model/genetic/terminals/ConstantTest.java" />
         <option value="$PROJECT_DIR$/src/model/genetic/tree/NodeTest.java" />
@@ -271,9 +292,7 @@
         <option value="$PROJECT_DIR$/src/model/genetic/tree/sessions/FitnessUtil.java" />
         <option value="$PROJECT_DIR$/src/model/genetic/tree/SetPool.java" />
         <option value="$PROJECT_DIR$/src/unittest/model/genetic/tree/TreeTest.java" />
-        <option value="$PROJECT_DIR$/src/model/genetic/tree/Tree.java" />
         <option value="$PROJECT_DIR$/src/unittest/model/genetic/tree/GenePoolTest.java" />
-        <option value="$PROJECT_DIR$/src/model/genetic/tree/GenePool.java" />
         <option value="$PROJECT_DIR$/src/model/genetic/tree/session/PopulationGenerator.java" />
         <option value="$PROJECT_DIR$/src/model/genetic/tree/session/PopulationTest.java" />
         <option value="$PROJECT_DIR$/src/model/genetic/tree/session/PopulationGeneratorTest.java" />
@@ -283,8 +302,11 @@
         <option value="$PROJECT_DIR$/src/model/genetic/tree/session/TrainingSet.java" />
         <option value="$PROJECT_DIR$/src/model/genetic/tree/session/TrainingSetTest.java" />
         <option value="$PROJECT_DIR$/src/unittest/model/genetic/tree/session/PopulationTest.java" />
-        <option value="$PROJECT_DIR$/src/unittest/model/genetic/tree/session/FitnessRunnableTest.java" />
         <option value="$PROJECT_DIR$/src/model/genetic/tree/session/FitnessRunnable.java" />
+        <option value="$PROJECT_DIR$/src/model/genetic/tree/Tree.java" />
+        <option value="$PROJECT_DIR$/src/model/genetic/tree/session/Population.java" />
+        <option value="$PROJECT_DIR$/src/model/genetic/tree/GenePool.java" />
+        <option value="$PROJECT_DIR$/src/unittest/model/genetic/tree/session/FitnessRunnableTest.java" />
       </list>
     </option>
   </component>
@@ -379,51 +401,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="terminals" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GenTree" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GenTree" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tree" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="session" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GenTree" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GenTree" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tree" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="functions" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -551,112 +529,8 @@
       <recent name="C:\Users\saruman\IdeaProjects\GenTree\GenTree" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.FitnessRunnableTest.testRun">
-    <configuration default="false" name="PopulationGeneratorTest.testGenerateRampedHalfAndHalf" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="unittest.model.genetic.tree.session.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="GenTree" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="unittest.model.genetic.tree.session" />
-      <option name="MAIN_CLASS_NAME" value="unittest.model.genetic.tree.session.PopulationGeneratorTest" />
-      <option name="METHOD_NAME" value="testGenerateRampedHalfAndHalf" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="PopulationTest.testCalculateTrees" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="unittest.model.genetic.tree.session.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="GenTree" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="unittest.model.genetic.tree.session" />
-      <option name="MAIN_CLASS_NAME" value="unittest.model.genetic.tree.session.PopulationTest" />
-      <option name="METHOD_NAME" value="testCalculateTrees" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="TrainingSetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="unittest.model.genetic.tree.session.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="GenTree" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="unittest.model.genetic.tree.session" />
-      <option name="MAIN_CLASS_NAME" value="unittest.model.genetic.tree.session.TrainingSetTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="InputTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="unittest.model.genetic.tree.session.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="GenTree" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="unittest.model.genetic.tree.session" />
-      <option name="MAIN_CLASS_NAME" value="unittest.model.genetic.tree.session.InputTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="FitnessRunnableTest.testRun" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.FitnessRunnableTest.testRunRamped">
+    <configuration default="false" name="FitnessRunnableTest.testRunFull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="unittest.model.genetic.tree.session.*" />
@@ -668,7 +542,111 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="unittest.model.genetic.tree.session" />
       <option name="MAIN_CLASS_NAME" value="unittest.model.genetic.tree.session.FitnessRunnableTest" />
-      <option name="METHOD_NAME" value="testRun" />
+      <option name="METHOD_NAME" value="testRunFull" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="PopulationGeneratorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="unittest.model.genetic.tree.session.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="GenTree" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="unittest.model.genetic.tree.session" />
+      <option name="MAIN_CLASS_NAME" value="unittest.model.genetic.tree.session.PopulationGeneratorTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="FitnessRunnableTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="unittest.model.genetic.tree.session.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="GenTree" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="unittest.model.genetic.tree.session" />
+      <option name="MAIN_CLASS_NAME" value="unittest.model.genetic.tree.session.FitnessRunnableTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="FitnessRunnableTest.testRunGrow" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="unittest.model.genetic.tree.session.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="GenTree" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="unittest.model.genetic.tree.session" />
+      <option name="MAIN_CLASS_NAME" value="unittest.model.genetic.tree.session.FitnessRunnableTest" />
+      <option name="METHOD_NAME" value="testRunGrow" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="FitnessRunnableTest.testRunRamped" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="unittest.model.genetic.tree.session.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="GenTree" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="unittest.model.genetic.tree.session" />
+      <option name="MAIN_CLASS_NAME" value="unittest.model.genetic.tree.session.FitnessRunnableTest" />
+      <option name="METHOD_NAME" value="testRunRamped" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -1158,19 +1136,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.PopulationGeneratorTest.testGenerateRampedHalfAndHalf" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.PopulationTest.testCalculateTrees" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.TrainingSetTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.InputTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.FitnessRunnableTest.testRun" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.FitnessRunnableTest.testRunFull" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.PopulationGeneratorTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.FitnessRunnableTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.FitnessRunnableTest.testRunGrow" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.FitnessRunnableTest.testRunRamped" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.FitnessRunnableTest.testRun" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.InputTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.TrainingSetTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.PopulationTest.testCalculateTrees" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.PopulationGeneratorTest.testGenerateRampedHalfAndHalf" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.FitnessRunnableTest.testRunRamped" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.FitnessRunnableTest.testRunGrow" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.FitnessRunnableTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.PopulationGeneratorTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.FitnessRunnableTest.testRunFull" />
       </list>
     </recent_temporary>
   </component>
@@ -1206,34 +1184,35 @@
       <workItem from="1499885776715" duration="9432000" />
       <workItem from="1500045758838" duration="1185000" />
       <workItem from="1500102725601" duration="1788000" />
-      <workItem from="1500202460680" duration="4768000" />
+      <workItem from="1500202460680" duration="5312000" />
+      <workItem from="1500317002762" duration="4182000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FitnessRunnableTest_testRun - 2017.07.17 at 01h 43m 19s.xml">
+    <history-entry file="FitnessRunnableTest - 2017.07.18 at 00h 50m 23s.xml">
+      <configuration name="FitnessRunnableTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FitnessRunnableTest_testRun - 2017.07.18 at 00h 15m 14s.xml">
       <configuration name="FitnessRunnableTest.testRun" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FitnessRunnableTest_testRun - 2017.07.17 at 01h 45m 23s.xml">
+    <history-entry file="FitnessRunnableTest_testRun - 2017.07.18 at 00h 17m 50s.xml">
       <configuration name="FitnessRunnableTest.testRun" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FitnessRunnableTest_testRun - 2017.07.17 at 01h 46m 06s.xml">
+    <history-entry file="FitnessRunnableTest_testRun - 2017.07.18 at 00h 25m 43s.xml">
       <configuration name="FitnessRunnableTest.testRun" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FitnessRunnableTest_testRun - 2017.07.17 at 01h 46m 35s.xml">
-      <configuration name="FitnessRunnableTest.testRun" configurationId="JUnit" />
+    <history-entry file="FitnessRunnableTest_testRunFull - 2017.07.18 at 00h 49m 23s.xml">
+      <configuration name="FitnessRunnableTest.testRunFull" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FitnessRunnableTest_testRun - 2017.07.17 at 01h 47m 09s.xml">
-      <configuration name="FitnessRunnableTest.testRun" configurationId="JUnit" />
+    <history-entry file="FitnessRunnableTest_testRunGrow - 2017.07.18 at 00h 51m 01s.xml">
+      <configuration name="FitnessRunnableTest.testRunGrow" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FitnessRunnableTest_testRun - 2017.07.17 at 01h 49m 29s.xml">
-      <configuration name="FitnessRunnableTest.testRun" configurationId="JUnit" />
+    <history-entry file="FitnessRunnableTest_testRunRamped - 2017.07.18 at 00h 51m 11s.xml">
+      <configuration name="FitnessRunnableTest.testRunRamped" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InputTest - 2017.07.17 at 01h 39m 19s.xml">
-      <configuration name="InputTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PopulationTest_testCalculateTrees - 2017.07.13 at 01h 00m 57s.xml">
-      <configuration name="PopulationTest.testCalculateTrees" configurationId="JUnit" />
+    <history-entry file="PopulationGeneratorTest - 2017.07.18 at 00h 49m 40s.xml">
+      <configuration name="PopulationGeneratorTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="PopulationTest_testCalculateTrees - 2017.07.13 at 01h 01m 03s.xml">
       <configuration name="PopulationTest.testCalculateTrees" configurationId="JUnit" />
@@ -1243,7 +1222,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106785000" />
+    <option name="totallyTimeSpent" value="111511000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1255,10 +1234,10 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37103593" sideWeight="0.50208336" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36363637" sideWeight="0.17760417" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36363637" sideWeight="0.82239586" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37103593" sideWeight="0.49791667" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1267,7 +1246,6 @@
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16145833" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1279,6 +1257,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19114584" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1425,14 +1404,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/Tree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/unittest/model/genetic/tree/TreeTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -1444,14 +1415,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="37" column="48" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/GenePool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1339">
-          <caret line="174" column="5" selection-start-line="174" selection-start-column="5" selection-end-line="174" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -1506,14 +1469,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/session/PopulationGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="654">
-          <caret line="49" column="30" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/session/Input.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -1522,28 +1477,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/session/Population.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/unittest/model/genetic/tree/GenePoolTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
+        <state relative-caret-position="425">
           <caret line="35" column="54" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
-          <folding>
-            <element signature="e#550#558#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/unittest/model/genetic/tree/session/PopulationGeneratorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="49" column="132" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="132" />
           <folding />
         </state>
       </provider>
@@ -1552,13 +1489,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/SetPool.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
+        <state relative-caret-position="493">
           <caret line="30" column="67" selection-start-line="30" selection-start-column="67" selection-end-line="30" selection-end-column="67" />
           <folding>
             <element signature="e#1195#1196#0" expanded="true" />
@@ -1571,7 +1507,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/session/TrainingSet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
+        <state relative-caret-position="289">
           <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1585,9 +1521,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/session/FitnessRunnable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+          <folding>
+            <element signature="e#827#828#0" expanded="true" />
+            <element signature="e#856#857#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/unittest/model/genetic/tree/session/PopulationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="53" column="34" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/unittest/model/genetic/tree/session/InputTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
+        <state relative-caret-position="119">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1595,47 +1552,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/unittest/model/genetic/tree/session/PopulationTest.java">
+    <entry file="file://$PROJECT_DIR$/src/unittest/model/genetic/tree/session/TrainingSetTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="53" column="34" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="34" />
+        <state relative-caret-position="476">
+          <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="66" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#967#975#0" expanded="true" />
-            <element signature="e#1034#1042#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/unittest/model/genetic/tree/session/TrainingSetTest.java">
+    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/Tree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="66" />
+        <state relative-caret-position="340">
+          <caret line="34" column="53" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#793#800#0" expanded="true" />
+            <element signature="e#715#716#0" expanded="true" />
+            <element signature="e#775#776#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/session/Population.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="812">
+          <caret line="61" column="39" selection-start-line="61" selection-start-column="39" selection-end-line="61" selection-end-column="39" />
+          <folding>
+            <element signature="e#1667#1668#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/session/PopulationGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="35" column="61" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/GenePool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="158" column="36" selection-start-line="158" selection-start-column="36" selection-end-line="158" selection-end-column="36" />
+          <folding>
+            <element signature="e#712#713#0" expanded="true" />
+            <element signature="e#781#782#0" expanded="true" />
+            <element signature="e#2558#2559#0" expanded="true" />
+            <element signature="e#2640#2641#0" expanded="true" />
+            <element signature="e#2685#2686#0" expanded="true" />
+            <element signature="e#2767#2768#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/unittest/model/genetic/tree/session/PopulationGeneratorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="49" column="132" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="132" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/unittest/model/genetic/tree/session/FitnessRunnableTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="591">
-          <caret line="68" column="18" selection-start-line="68" selection-start-column="16" selection-end-line="68" selection-end-column="23" />
+        <state relative-caret-position="1033">
+          <caret line="89" column="23" selection-start-line="89" selection-start-column="23" selection-end-line="89" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#780#788#0" expanded="true" />
-            <element signature="e#847#855#0" expanded="true" />
-            <element signature="e#1455#1462#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/genetic/tree/session/FitnessRunnable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
