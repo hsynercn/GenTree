@@ -70,7 +70,7 @@ public class FitnessRunnableTest extends TestCase {
     }
 
     public void testRunFull() throws Exception {
-        Population population =  PopulationGenerator.generate(PopulationGenerator.PopulationType.FULL,genePool,setPool,10,5);
+        Population population =  PopulationController.generate(PopulationController.PopulationType.FULL,genePool,setPool,10,5);
         FitnessRunnable runnable = new FitnessRunnable(population, this.trainingSet);
         for(Tree tree: population.getTrees()){
             System.out.println(">" + tree.getTreeExpression());
@@ -79,7 +79,7 @@ public class FitnessRunnableTest extends TestCase {
     }
 
     public void testRunGrow() throws Exception {
-        Population population =  PopulationGenerator.generate(PopulationGenerator.PopulationType.GROW,genePool,setPool,10,5);
+        Population population =  PopulationController.generate(PopulationController.PopulationType.GROW,genePool,setPool,10,5);
         FitnessRunnable runnable = new FitnessRunnable(population, this.trainingSet);
         for(Tree tree: population.getTrees()){
             System.out.println(">" + tree.getTreeExpression());
@@ -88,7 +88,7 @@ public class FitnessRunnableTest extends TestCase {
     }
 
     public void testRunRamped() throws Exception {
-        Population population =  PopulationGenerator.generate(PopulationGenerator.PopulationType.RAMPED_HALF_AND_HALF,genePool,setPool,10,5);
+        Population population =  PopulationController.generate(PopulationController.PopulationType.RAMPED_HALF_AND_HALF,genePool,setPool,10,5);
         FitnessRunnable runnable = new FitnessRunnable(population, this.trainingSet);
         for(Tree tree: population.getTrees()){
             System.out.println(">" + tree.getTreeExpression());

@@ -7,6 +7,32 @@ public class Tree {
 
     private Node rootNode = null;
 
+    public Tree clone(){
+        return new Tree(this.rootNode);
+    }
+
+    private Node cloneNode(Node realParent ){
+
+        Node copyParent = realParent.dumbClone();
+        if(realParent.getNodeType() == Node.NodeType.NODE){
+
+            Node clonedLeft = this.cloneNode(realParent.getLeftChild());
+            Node clonedRight = this.cloneNode(realParent.getRightChild());
+
+            copyParent.setLeftChild(clonedLeft);
+            copyParent.setRightChild(clonedRight);
+
+            clonedLeft.setParent(copyParent);
+            clonedRight.setParent(copyParent);
+
+            return copyParent;
+
+        }else {
+            return realParent.dumbClone();
+        }
+
+    }
+
     public Tree(Node root) {
         this.rootNode = root;
     }

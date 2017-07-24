@@ -19,6 +19,18 @@ public class Node {
     private String iTerminalID = null;
 
 
+    public Node dumbClone(){
+        Node dumbClone = null;
+        if(this.nodeType == NodeType.NODE){
+            dumbClone = new Node(this.parent, this.iFunctionID, this.nodeType);
+        }else if(nodeType == NodeType.LEAF)
+        {
+            dumbClone = new Node(this.parent, this.iTerminalID, this.nodeType);
+        }
+        dumbClone.setRightChild(this.leftChild);
+        dumbClone.setLeftChild(this.rightChild);
+        return dumbClone;
+    }
 
     public Node(Node parent, String componenetId, NodeType nodeType) {
         this.parent = parent;
@@ -30,7 +42,6 @@ public class Node {
             this.iTerminalID = componenetId;
         }
     }
-
 
     public void setLeftChild(Node leftChild) {
         this.leftChild = leftChild;

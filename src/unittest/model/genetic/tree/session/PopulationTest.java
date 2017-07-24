@@ -5,13 +5,10 @@ import model.genetic.tree.GenePool;
 import model.genetic.tree.IFunction;
 import model.genetic.tree.ITerminal;
 import model.genetic.tree.SetPool;
-import model.genetic.tree.functions.Div;
-import model.genetic.tree.functions.Mul;
 import model.genetic.tree.functions.Sub;
 import model.genetic.tree.functions.Sum;
 import model.genetic.tree.session.Population;
-import model.genetic.tree.session.PopulationGenerator;
-import model.genetic.tree.terminals.Constant;
+import model.genetic.tree.session.PopulationController;
 import model.genetic.tree.terminals.Variable;
 
 import java.util.ArrayList;
@@ -52,13 +49,13 @@ public class PopulationTest extends TestCase {
     }
 
     public void testCalculateTrees() throws Exception {
-        Population population = PopulationGenerator.generate(PopulationGenerator.PopulationType.FULL,genePool,setPool,10,5);
+        Population population = PopulationController.generate(PopulationController.PopulationType.FULL,genePool,setPool,10,5);
         int resSize = population.calculateTrees().length;
         assertEquals(10,resSize);
     }
 
     public void testGetPopulationSize() throws Exception {
-        int size = PopulationGenerator.generate(PopulationGenerator.PopulationType.FULL,genePool,setPool,10,5).getPopulationSize();
+        int size = PopulationController.generate(PopulationController.PopulationType.FULL,genePool,setPool,10,5).getPopulationSize();
         assertEquals(10, size);
     }
 }

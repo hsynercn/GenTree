@@ -1,5 +1,7 @@
 package model.genetic.tree.session;
 
+import model.genetic.tree.error.TreeError;
+
 import java.util.ArrayList;
 
 import static java.lang.Math.abs;
@@ -12,7 +14,7 @@ public class FitnessRunnable implements Runnable {
     private Population population;
     private TrainingSet trainingSet;
     private boolean resultReady;
-    private double[] errors = null;
+    private TreeError[] errors = null;
 
     public FitnessRunnable(Population population, TrainingSet trainingSet) {
         this.population = population;
@@ -28,13 +30,16 @@ public class FitnessRunnable implements Runnable {
         this.resultReady = true;
     }
 
-    public double[] getErrors() {
+    public TreeError[] getErrors() {
         return errors;
     }
 
-    public double[] populationError(Population population, TrainingSet trainingSet){
-        double[] errros = new double[population.getPopulationSize()];
+    public TreeError[] populationError(Population population, TrainingSet trainingSet){
+
+        double[] errors = new double[population.getPopulationSize()];
         double[] tempResults = new double[population.getPopulationSize()];
+        TreeError[] treeErrors = new TreeError[population.getPopulationSize()];
+
         int sampeCount = trainingSet.getSampeCount();
         int i = 0;
         while (i<sampeCount){
@@ -46,13 +51,17 @@ public class FitnessRunnable implements Runnable {
                 e.printStackTrace();
             }
 
-            for (int j = 0; j<errros.length; j++){
-                errros[j] = errros[j] + ( trainingSet.getTargetValue(i) - tempResults[j] );
+            for (int j = 0; j<errors.length; j++){
+                errors[j] = errors[j] + ( trainingSet.getTargetValue(i) - tempResults[j] );
             }
             i++;
         }
 
-        return errros;
+        for( int j=0; j<population.getPopulationSize(); j++){
+            treeErrors[j] = new TreeError(population.getTrees().get(j) , errors[j]);
+        }
+
+        return treeErrors;
     }
 
     private void updateInputValues(Population population, TrainingSet trainingSet, int valueIndex){

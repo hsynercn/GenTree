@@ -7,7 +7,7 @@ import model.genetic.tree.ITerminal;
 import model.genetic.tree.SetPool;
 import model.genetic.tree.functions.Sub;
 import model.genetic.tree.functions.Sum;
-import model.genetic.tree.session.PopulationGenerator;
+import model.genetic.tree.session.PopulationController;
 import model.genetic.tree.terminals.Variable;
 
 import java.util.ArrayList;
@@ -16,7 +16,7 @@ import java.util.HashMap;
 /**
  * Created by saruman on 13.07.2017.
  */
-public class PopulationGeneratorTest extends TestCase {
+public class PopulationControllerTest extends TestCase {
 
     private HashMap<String, IFunction> functionHashMap = new HashMap<String, IFunction>();
     private HashMap<String, ITerminal> terminalHashMap = new HashMap<String, ITerminal>();
@@ -47,15 +47,15 @@ public class PopulationGeneratorTest extends TestCase {
     }
 
     public void testGenerateFull() throws Exception {
-        assertEquals(PopulationGenerator.generate(PopulationGenerator.PopulationType.FULL,genePool,setPool,10,5).getPopulationSize(),10);
+        assertEquals(PopulationController.generate(PopulationController.PopulationType.FULL,genePool,setPool,10,5).getPopulationSize(),10);
     }
 
     public void testGenerateGrow() throws Exception {
-        assertEquals(PopulationGenerator.generate(PopulationGenerator.PopulationType.GROW,genePool,setPool,10,5).getPopulationSize(),10);
+        assertEquals(PopulationController.generate(PopulationController.PopulationType.GROW,genePool,setPool,10,5).getPopulationSize(),10);
     }
 
     public void testGenerateRampedHalfAndHalf() throws Exception {
-        assertEquals(PopulationGenerator.generate(PopulationGenerator.PopulationType.RAMPED_HALF_AND_HALF,genePool,setPool,10,5).getPopulationSize(),10);
+        assertEquals(PopulationController.generate(PopulationController.PopulationType.RAMPED_HALF_AND_HALF,genePool,setPool,10,5).getPopulationSize(),10);
     }
 
 }
