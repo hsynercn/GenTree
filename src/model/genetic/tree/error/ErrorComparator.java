@@ -14,7 +14,7 @@ public class ErrorComparator implements Comparator<TreeError> {
 
     @Override
     public int compare(TreeError o1, TreeError o2) {
-        return o1.getError() < o2.getError() ? -1 : o1.getError() == o2.getError() ? 0 : 1;
+        return o1.getError() < o2.getError() ? 1 : o1.getError() == o2.getError() ? 0 : -1;
     }
 
     @Override

@@ -1,10 +1,8 @@
 package unittest.model.genetic.tree.session;
 
 import junit.framework.TestCase;
-import model.genetic.tree.GenePool;
-import model.genetic.tree.IFunction;
-import model.genetic.tree.ITerminal;
-import model.genetic.tree.SetPool;
+import model.genetic.tree.*;
+import model.genetic.tree.error.TreeError;
 import model.genetic.tree.functions.Sub;
 import model.genetic.tree.functions.Sum;
 import model.genetic.tree.session.PopulationController;
@@ -24,6 +22,9 @@ public class PopulationControllerTest extends TestCase {
     private ArrayList<String> terminals = new ArrayList<String>();
     private SetPool setPool;
     private GenePool genePool;
+
+    private Node leaf = new Node(null, "function", Node.NodeType.LEAF);
+    private Tree tree = new Tree(leaf);
 
     public void setUp() throws Exception {
         super.setUp();
@@ -58,4 +59,31 @@ public class PopulationControllerTest extends TestCase {
         assertEquals(PopulationController.generate(PopulationController.PopulationType.RAMPED_HALF_AND_HALF,genePool,setPool,10,5).getPopulationSize(),10);
     }
 
+    public void testSortError() throws Exception {
+        TreeError[] treeErrors = new TreeError[5];
+        treeErrors[0] = new TreeError(tree, 5.0);
+        treeErrors[1] = new TreeError(tree, 9.0);
+        treeErrors[2] = new TreeError(tree, 2.0);
+        treeErrors[3] = new TreeError(tree, 7.0);
+        treeErrors[4] = new TreeError(tree, 1.0);
+
+        TreeError[] sorted = PopulationController.sortError(treeErrors);
+
+        for(int i=0;i<treeErrors.length-1;i++){
+            if(treeErrors[i].getError()<treeErrors[i+1].getError()){
+                fail("Sorted tree error sequence is not in expected condition.");
+            }
+        }
+
+    }
+
+    public void testRankSelect() throws Exception {
+
+        //TODO implement rank selection test
+    }
+
+    public void testSelect() throws Exception {
+
+        //TODO implement population selection test
+    }
 }

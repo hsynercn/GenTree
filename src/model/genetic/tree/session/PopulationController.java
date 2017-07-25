@@ -93,9 +93,9 @@ public class PopulationController {
                 nextGeneration.add(b);
             }
         }
-        
 
-        //TODO mutation
+
+        //TODO implement mutation
 
         return new Population(individuals, setPool);
     }
@@ -107,16 +107,23 @@ public class PopulationController {
         return treeErrorList;
     }
 
-    public static ArrayList<Tree> rankSelect(Tree[] trees, int selectCount){
+    /**
+     * Rank selection for genetic trees. Sorted tree's first element is the most successful one, it has the highest
+     * selection probability. Individual selection portions decreases one by one for later trees.
+     * @param sortedTrees Most successful tree is the first tree of the array.
+     * @param selectCount
+     * @return
+     */
+    public static ArrayList<Tree> rankSelect(Tree[] sortedTrees, int selectCount){
 
-        if(trees.length<selectCount){
+        if(sortedTrees.length<selectCount){
             throw new IllegalArgumentException("Rank Selection: Selection can't exceed");
         }
 
         ArrayList<Tree> treeArrayList = new ArrayList<Tree>();
 
-        int[] selectionPortitions = new int[trees.length];
-        int sum = trees.length * (trees.length - 1) / 2;
+        int[] selectionPortitions = new int[sortedTrees.length];
+        int sum = sortedTrees.length * (sortedTrees.length - 1) / 2;
 
         //0 location is the most successful, it has largest portion
         for(int i=0;i<selectionPortitions.length;i++){
@@ -131,7 +138,7 @@ public class PopulationController {
             while(randSel>selectionPortitions[randSelLocator]){
                 randSelLocator++;
             }
-            treeArrayList.add(trees[randSelLocator]);
+            treeArrayList.add(sortedTrees[randSelLocator]);
         }
 
         return treeArrayList;
